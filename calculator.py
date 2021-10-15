@@ -1,8 +1,10 @@
 import re
 
 def calculator(number1, number2, operator):
+	# adding floats to number 1 and 2
     number1=float(number1)
     number2=float(number2)
+	# python operators for the calculator
     if(operator=="+"):
         return(float(number1+number2))
     if(operator=="-"):
@@ -12,16 +14,22 @@ def calculator(number1, number2, operator):
     if(operator=="/"):
         return(float(number1/number2))
     if(operator=="//"):
-        return(number1//number2)
+        return(float(number1//number2))
     if(operator=="**"):
         return(float(number1**number2))
     else:
         return False
 
 def parse_input():
-	numb1=""
-	numb2=""
 	ParseThis=input("Enter equation: ")
-	In-num=re.findall(r'[0-9\.]+|[^0-9\.]+', ParseThis)
-	print(calculator(In-num[0], In-num[2], In-num[1]))
+	first_num = ParseThis.split()[0]
+	second_num = ParseThis.split()[2]
+	opera = ParseThis.split()[1]
+	Num1= first_num
+	Num2= second_num
+	symbol = opera
+	
+	
+	#In-num=re.findall(r'[0-9\.]+|[^0-9\.]+', ParseThis)
+	print(calculator(Num1, symbol, Num2))
     
