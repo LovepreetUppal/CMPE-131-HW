@@ -1,9 +1,5 @@
-import re
 
 def calculator(number1, number2, operator):
-	# adding floats to number 1 and 2
-    number1=(number1)
-    number2=(number2)
 	# python operators for the calculator
     if(operator=="+"):
         return(number1+number2)
